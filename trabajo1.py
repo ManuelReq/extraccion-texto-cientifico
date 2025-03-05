@@ -65,22 +65,22 @@ for filename in os.listdir(xml_folder):
 
 # Ahora hago una verificación final de los datos que extraje.
 # Imprimo la cantidad de artículos y la cantidad de entradas de figuras.
-print("\nVerificación final de datos:")
-print(f"Cantidad de artículos: {len(articulos)}")
-print(f"Cantidad de entradas en num_figuras: {len(num_figuras)}")
+#print("\nVerificación final de datos:")
+#print(f"Cantidad de artículos: {len(articulos)}")
+#print(f"Cantidad de entradas en num_figuras: {len(num_figuras)}")
 
 # Si el número de artículos es igual al número de figuras y es mayor a 0, genero el gráfico.
 # Este gráfico mostrará cuántas figuras tiene cada artículo.
 if len(articulos) == len(num_figuras) and len(articulos) > 0:
     plt.figure(figsize=(10,5))
-    plt.bar(articulos, num_figuras, color='skyblue')
+    plt.bar(articulos, num_figuras, color='darkgreen')
     plt.xticks(rotation=45, ha="right")
     plt.xlabel("Artículo")
     plt.ylabel("Número de Figuras")
     plt.title("Número de Figuras por Artículo")
     plt.show()
 else:
-    print("Error: Las listas no tienen la misma cantidad de elementos. Revisa los datos antes de graficar.")
+    print("Tienes un error: Las listas no tienen la misma cantidad de elementos. Revisa los datos antes de graficar.")
 
 # Imprimo los enlaces que encontré en cada artículo.
 # Esto me permitirá ver todos los enlaces asociados a cada artículo.
