@@ -5,19 +5,20 @@ Este documento explica cómo se han validado los resultados obtenidos en el aná
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## 1. Validación del Número de Figuras 
-- Se comparó la cantidad de figuras extraídas del XML con las figuras visibles en los artículos PDF.  
-- Se imprimieron los valores de `num_figuras` antes de graficarlos para verificar que la extracción fue correcta.  
+- Primero comparé la cantidad de figuras extraídas del XML con las figuras visibles en los artículos PDF.  
+- Al ser las mismas imprimi los valores de `num_figuras` antes de graficarlos para verificar que la extracción fue correcta.  
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## 2. Validación de los Enlaces Extraídos 
-- Se listaron todos los enlaces detectados en los XML con `print()`.  
-- Se revisó que cada enlace encontrado en `ptr[@target]` correspondiera a una referencia real en el documento.  
+- Aquí solamente liste todos los enlaces detectados en los XML con `print()`.  
+- Y revisé que cada enlace encontrado en `ptr[@target]` correspondiera a una referencia real en el documento.  
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## 3. Validación de la Nube de Palabras Clave 
-- Se imprimieron los primeros 300 caracteres del resumen (`abstract_text[:300]`) para comprobar que contenían información relevante.  
+- Para validar este paso primero almacene todos los resumenes en una variable y comprobe que existiera dichos resumenes (que no estuvieran vacios)
+ posteriormente con las palabras mas frecuentadas cree la nube de palabras poniendo las mas relevante mas grande y las menos relevantes mas pequeñas.  
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 
